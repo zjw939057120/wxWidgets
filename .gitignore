@@ -1,0 +1,7 @@
+*.VC.opendb
+*.VC.db
+*.sln
+*.vcxproj*
+/build
+/samples/.vs
+/samples
