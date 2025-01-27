@@ -1,12 +1,12 @@
-cmake_minimum_required(VERSION 3.18)
+cmake_minimum_required(VERSION 3.17)
 project(application)
 
 set(CMAKE_CXX_STANDARD 11)
 
-include_directories(../lib/vc_x64_lib/mswu)
-include_directories(../include)
+include_directories(../../lib/vc_x64_lib/mswu)
+include_directories(../../include)
 include_directories(.)
-link_directories(../lib/vc_x64_lib)
+link_directories(../../lib/vc_x64_lib)
 
 
 add_definitions(
@@ -22,7 +22,10 @@ add_definitions(
 )
 
 link_libraries(
+        wxmsw32u_aui.lib
+        wxmsw32u_html.lib
         wxmsw32u_core.lib
+        wxbase32u_xml.lib
         wxbase32u.lib
         wxtiff.lib
         wxjpeg.lib
@@ -52,3 +55,9 @@ link_libraries(
 add_executable(main main.cpp)
 
 add_subdirectory(samples)
+
+add_executable(application application.cpp MyProjectBase.cpp)
+if (WIN32)
+    target_sources(application PRIVATE sample.rc)
+    set_target_properties(application PROPERTIES WIN32_EXECUTABLE ON)
+endif ()
