@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.17)
-project(application)
+project(app)
 
 set(CMAKE_CXX_STANDARD 11)
 
@@ -52,12 +52,11 @@ link_libraries(
         wininet.lib
 )
 
-add_executable(main main.cpp)
-
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /utf-8")
 add_subdirectory(samples)
+add_executable(${PROJECT_NAME} MyApp.cpp MyProject.cpp MyProjectBase.cpp)
 
-add_executable(application application.cpp MyProjectBase.cpp)
 if (WIN32)
-    target_sources(application PRIVATE sample.rc)
-    set_target_properties(application PROPERTIES WIN32_EXECUTABLE ON)
+    target_sources(${PROJECT_NAME} PRIVATE sample.rc)
+    set_target_properties(${PROJECT_NAME} PROPERTIES WIN32_EXECUTABLE ON)
 endif ()

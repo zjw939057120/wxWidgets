@@ -1,6 +1,6 @@
 
-#ifndef APPLICATION_APPLICATION_H
-#define APPLICATION_APPLICATION_H
+#ifndef APP_MYAPP_H
+#define APP_MYAPP_H
 
 // ============================================================================
 // declarations
@@ -43,9 +43,16 @@
 #include "sample.xpm"
 #endif
 
-class application {
+// ----------------------------------------------------------------------------
+// MyApp
+// ----------------------------------------------------------------------------
 
+class MyApp : public wxApp {
+public:
+    virtual bool OnInit() wxOVERRIDE;
+
+public:
+    wxWindow *parent = NULL;
 };
 
-
-#endif //APPLICATION_APPLICATION_H
+#endif //APP_MYAPP_H
