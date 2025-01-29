@@ -50,7 +50,7 @@
       <property name="minimum_size"></property>
       <property name="name">MainFrameBase</property>
       <property name="pos"></property>
-      <property name="size">500,300</property>
+      <property name="size">880,660</property>
       <property name="style">wxDEFAULT_FRAME_STYLE</property>
       <property name="subclass">; ; forward_declare</property>
       <property name="title">Main</property>
@@ -60,7 +60,7 @@
       <property name="window_name"></property>
       <property name="window_style">wxTAB_TRAVERSAL</property>
       <property name="xrc_skip_sizer">1</property>
-      <object class="wxMenuBar" expanded="false">
+      <object class="wxMenuBar" expanded="true">
         <property name="bg"></property>
         <property name="context_help"></property>
         <property name="context_menu">1</property>
@@ -208,6 +208,20 @@
           <property name="label">Setting</property>
           <property name="name">m_menu_setting</property>
           <property name="permission">protected</property>
+          <object class="wxMenuItem" expanded="false">
+            <property name="bitmap"></property>
+            <property name="checked">0</property>
+            <property name="enabled">1</property>
+            <property name="help"></property>
+            <property name="id">wxID_ANY</property>
+            <property name="kind">wxITEM_NORMAL</property>
+            <property name="label">Adjust</property>
+            <property name="name">m_menuItemAdjust</property>
+            <property name="permission">none</property>
+            <property name="shortcut"></property>
+            <property name="unchecked_bitmap"></property>
+            <event name="OnMenuSelection">m_menuItemAdjustOnMenuSelection</event>
+          </object>
         </object>
         <object class="wxMenu" expanded="false">
           <property name="label">Help</property>
@@ -234,12 +248,12 @@
             <property name="help"></property>
             <property name="id">wxID_ANY</property>
             <property name="kind">wxITEM_NORMAL</property>
-            <property name="label">Q&amp;A</property>
-            <property name="name">m_menuItemQuestion</property>
+            <property name="label">Help</property>
+            <property name="name">m_menuItemHelp</property>
             <property name="permission">none</property>
             <property name="shortcut"></property>
             <property name="unchecked_bitmap"></property>
-            <event name="OnMenuSelection">m_menuItemQuestionOnMenuSelection</event>
+            <event name="OnMenuSelection">m_menuItemHelpOnMenuSelection</event>
           </object>
           <object class="wxMenuItem" expanded="false">
             <property name="bitmap"></property>
@@ -256,6 +270,30 @@
             <event name="OnMenuSelection">m_menuItemAboutOnMenuSelection</event>
           </object>
         </object>
+      </object>
+      <object class="wxStatusBar" expanded="true">
+        <property name="bg"></property>
+        <property name="context_help"></property>
+        <property name="context_menu">1</property>
+        <property name="drag_accept_files">0</property>
+        <property name="enabled">1</property>
+        <property name="fg"></property>
+        <property name="fields">1</property>
+        <property name="font"></property>
+        <property name="hidden">0</property>
+        <property name="id">wxID_ANY</property>
+        <property name="maximum_size"></property>
+        <property name="minimum_size"></property>
+        <property name="name">m_statusBar</property>
+        <property name="permission">protected</property>
+        <property name="pos"></property>
+        <property name="size"></property>
+        <property name="style">wxSTB_SIZEGRIP</property>
+        <property name="subclass">; ; forward_declare</property>
+        <property name="tooltip"></property>
+        <property name="window_extra_style"></property>
+        <property name="window_name"></property>
+        <property name="window_style"></property>
       </object>
     </object>
     <object class="Frame" expanded="false">
@@ -277,7 +315,7 @@
       <property name="minimum_size"></property>
       <property name="name">FunctionFrameBase</property>
       <property name="pos"></property>
-      <property name="size">500,300</property>
+      <property name="size">800,600</property>
       <property name="style">wxDEFAULT_FRAME_STYLE</property>
       <property name="subclass">; ; forward_declare</property>
       <property name="title">Function</property>
@@ -297,7 +335,7 @@
         <property name="vgap">0</property>
       </object>
     </object>
-    <object class="Frame" expanded="true">
+    <object class="Frame" expanded="false">
       <property name="aui_managed">0</property>
       <property name="aui_manager_style">wxAUI_MGR_DEFAULT</property>
       <property name="bg"></property>
@@ -316,7 +354,7 @@
       <property name="minimum_size"></property>
       <property name="name">QueueFrameBase</property>
       <property name="pos"></property>
-      <property name="size">500,300</property>
+      <property name="size">800,600</property>
       <property name="style">wxDEFAULT_FRAME_STYLE</property>
       <property name="subclass">; ; forward_declare</property>
       <property name="title">Queue</property>
@@ -336,7 +374,46 @@
         <property name="vgap">0</property>
       </object>
     </object>
-    <object class="Frame" expanded="true">
+    <object class="Frame" expanded="false">
+      <property name="aui_managed">0</property>
+      <property name="aui_manager_style">wxAUI_MGR_DEFAULT</property>
+      <property name="bg"></property>
+      <property name="center">wxBOTH</property>
+      <property name="context_help"></property>
+      <property name="context_menu">1</property>
+      <property name="drag_accept_files">0</property>
+      <property name="enabled">1</property>
+      <property name="event_handler">impl_virtual</property>
+      <property name="extra_style"></property>
+      <property name="fg"></property>
+      <property name="font"></property>
+      <property name="hidden">0</property>
+      <property name="id">wxID_ANY</property>
+      <property name="maximum_size"></property>
+      <property name="minimum_size"></property>
+      <property name="name">SampleFrameBase</property>
+      <property name="pos"></property>
+      <property name="size">800,600</property>
+      <property name="style">wxDEFAULT_FRAME_STYLE</property>
+      <property name="subclass">; ; forward_declare</property>
+      <property name="title">Sample</property>
+      <property name="tooltip"></property>
+      <property name="two_step_creation">0</property>
+      <property name="window_extra_style"></property>
+      <property name="window_name"></property>
+      <property name="window_style">wxTAB_TRAVERSAL</property>
+      <property name="xrc_skip_sizer">1</property>
+      <object class="wxGridSizer" expanded="false">
+        <property name="cols">2</property>
+        <property name="hgap">0</property>
+        <property name="minimum_size"></property>
+        <property name="name">gSizer7</property>
+        <property name="permission">none</property>
+        <property name="rows">0</property>
+        <property name="vgap">0</property>
+      </object>
+    </object>
+    <object class="Frame" expanded="false">
       <property name="aui_managed">0</property>
       <property name="aui_manager_style">wxAUI_MGR_DEFAULT</property>
       <property name="bg"></property>
@@ -355,7 +432,7 @@
       <property name="minimum_size"></property>
       <property name="name">RecordFrameBase</property>
       <property name="pos"></property>
-      <property name="size">500,300</property>
+      <property name="size">800,600</property>
       <property name="style">wxDEFAULT_FRAME_STYLE</property>
       <property name="subclass">; ; forward_declare</property>
       <property name="title">Record</property>
@@ -365,7 +442,7 @@
       <property name="window_name"></property>
       <property name="window_style">wxTAB_TRAVERSAL</property>
       <property name="xrc_skip_sizer">1</property>
-      <object class="wxGridSizer" expanded="true">
+      <object class="wxGridSizer" expanded="false">
         <property name="cols">2</property>
         <property name="hgap">0</property>
         <property name="minimum_size"></property>
@@ -394,7 +471,7 @@
       <property name="minimum_size"></property>
       <property name="name">AdjustFrameBase</property>
       <property name="pos"></property>
-      <property name="size">500,300</property>
+      <property name="size">800,600</property>
       <property name="style">wxDEFAULT_FRAME_STYLE</property>
       <property name="subclass">; ; forward_declare</property>
       <property name="title">Adjust</property>
@@ -409,6 +486,45 @@
         <property name="hgap">0</property>
         <property name="minimum_size"></property>
         <property name="name">gSizer5</property>
+        <property name="permission">none</property>
+        <property name="rows">0</property>
+        <property name="vgap">0</property>
+      </object>
+    </object>
+    <object class="Frame" expanded="false">
+      <property name="aui_managed">0</property>
+      <property name="aui_manager_style">wxAUI_MGR_DEFAULT</property>
+      <property name="bg"></property>
+      <property name="center">wxBOTH</property>
+      <property name="context_help"></property>
+      <property name="context_menu">1</property>
+      <property name="drag_accept_files">0</property>
+      <property name="enabled">1</property>
+      <property name="event_handler">impl_virtual</property>
+      <property name="extra_style"></property>
+      <property name="fg"></property>
+      <property name="font"></property>
+      <property name="hidden">0</property>
+      <property name="id">wxID_ANY</property>
+      <property name="maximum_size"></property>
+      <property name="minimum_size"></property>
+      <property name="name">ManualFrameBase</property>
+      <property name="pos"></property>
+      <property name="size">800,600</property>
+      <property name="style">wxDEFAULT_FRAME_STYLE</property>
+      <property name="subclass">; ; forward_declare</property>
+      <property name="title">Manual</property>
+      <property name="tooltip"></property>
+      <property name="two_step_creation">0</property>
+      <property name="window_extra_style"></property>
+      <property name="window_name"></property>
+      <property name="window_style">wxTAB_TRAVERSAL</property>
+      <property name="xrc_skip_sizer">1</property>
+      <object class="wxGridSizer" expanded="false">
+        <property name="cols">2</property>
+        <property name="hgap">0</property>
+        <property name="minimum_size"></property>
+        <property name="name">gSizer8</property>
         <property name="permission">none</property>
         <property name="rows">0</property>
         <property name="vgap">0</property>
@@ -433,7 +549,7 @@
       <property name="minimum_size"></property>
       <property name="name">HelpFrameBase</property>
       <property name="pos"></property>
-      <property name="size">500,300</property>
+      <property name="size">800,600</property>
       <property name="style">wxDEFAULT_FRAME_STYLE</property>
       <property name="subclass">; ; forward_declare</property>
       <property name="title">Help</property>
@@ -482,11 +598,11 @@
       <property name="window_name"></property>
       <property name="window_style">wxTAB_TRAVERSAL</property>
       <property name="xrc_skip_sizer">1</property>
-      <object class="wxGridSizer" expanded="false">
+      <object class="wxGridSizer" expanded="true">
         <property name="cols">2</property>
         <property name="hgap">0</property>
         <property name="minimum_size"></property>
-        <property name="name">gSizer7</property>
+        <property name="name">gSizer9</property>
         <property name="permission">none</property>
         <property name="rows">0</property>
         <property name="vgap">0</property>

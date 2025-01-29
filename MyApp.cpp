@@ -11,8 +11,7 @@ bool MyApp::OnInit() {
     if (!wxApp::OnInit())
         return false;
 
-    MainFrame *frame = new MainFrame(parent);
-
+    MainFrame *frame = new MainFrame(m_wxWindow);
     frame->Show(true);
     return true;
 }

@@ -19,6 +19,7 @@
 #include <wx/font.h>
 #include <wx/colour.h>
 #include <wx/settings.h>
+#include <wx/statusbr.h>
 #include <wx/frame.h>
 #include <wx/sizer.h>
 
@@ -37,6 +38,7 @@ class MainFrameBase : public wxFrame
 		wxMenu* m_menu_edit;
 		wxMenu* m_menu_setting;
 		wxMenu* m_menu_help;
+		wxStatusBar* m_statusBar;
 
 		// Virtual event handlers, override them in your derived class
 		virtual void m_menuItemFunctionOnMenuSelection( wxCommandEvent& event ) { event.Skip(); }
@@ -47,14 +49,15 @@ class MainFrameBase : public wxFrame
 		virtual void m_menuItemCutOnMenuSelection( wxCommandEvent& event ) { event.Skip(); }
 		virtual void m_menuItemCopyOnMenuSelection( wxCommandEvent& event ) { event.Skip(); }
 		virtual void m_menuItemPasteOnMenuSelection( wxCommandEvent& event ) { event.Skip(); }
+		virtual void m_menuItemAdjustOnMenuSelection( wxCommandEvent& event ) { event.Skip(); }
 		virtual void m_menuItemManualOnMenuSelection( wxCommandEvent& event ) { event.Skip(); }
-		virtual void m_menuItemQuestionOnMenuSelection( wxCommandEvent& event ) { event.Skip(); }
+		virtual void m_menuItemHelpOnMenuSelection( wxCommandEvent& event ) { event.Skip(); }
 		virtual void m_menuItemAboutOnMenuSelection( wxCommandEvent& event ) { event.Skip(); }
 
 
 	public:
 
-		MainFrameBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Main"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 500,300 ), long style = wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL );
+		MainFrameBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Main"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 880,660 ), long style = wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL );
 
 		~MainFrameBase();
 
@@ -71,7 +74,7 @@ class FunctionFrameBase : public wxFrame
 
 	public:
 
-		FunctionFrameBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Function"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 500,300 ), long style = wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL );
+		FunctionFrameBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Function"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 800,600 ), long style = wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL );
 
 		~FunctionFrameBase();
 
@@ -88,9 +91,26 @@ class QueueFrameBase : public wxFrame
 
 	public:
 
-		QueueFrameBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Queue"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 500,300 ), long style = wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL );
+		QueueFrameBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Queue"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 800,600 ), long style = wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL );
 
 		~QueueFrameBase();
+
+};
+
+///////////////////////////////////////////////////////////////////////////////
+/// Class SampleFrameBase
+///////////////////////////////////////////////////////////////////////////////
+class SampleFrameBase : public wxFrame
+{
+	private:
+
+	protected:
+
+	public:
+
+		SampleFrameBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Sample"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 800,600 ), long style = wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL );
+
+		~SampleFrameBase();
 
 };
 
@@ -105,7 +125,7 @@ class RecordFrameBase : public wxFrame
 
 	public:
 
-		RecordFrameBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Record"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 500,300 ), long style = wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL );
+		RecordFrameBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Record"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 800,600 ), long style = wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL );
 
 		~RecordFrameBase();
 
@@ -122,9 +142,26 @@ class AdjustFrameBase : public wxFrame
 
 	public:
 
-		AdjustFrameBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Adjust"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 500,300 ), long style = wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL );
+		AdjustFrameBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Adjust"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 800,600 ), long style = wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL );
 
 		~AdjustFrameBase();
+
+};
+
+///////////////////////////////////////////////////////////////////////////////
+/// Class ManualFrameBase
+///////////////////////////////////////////////////////////////////////////////
+class ManualFrameBase : public wxFrame
+{
+	private:
+
+	protected:
+
+	public:
+
+		ManualFrameBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Manual"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 800,600 ), long style = wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL );
+
+		~ManualFrameBase();
 
 };
 
@@ -139,7 +176,7 @@ class HelpFrameBase : public wxFrame
 
 	public:
 
-		HelpFrameBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Help"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 500,300 ), long style = wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL );
+		HelpFrameBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Help"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 800,600 ), long style = wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL );
 
 		~HelpFrameBase();
 

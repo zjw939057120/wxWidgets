@@ -53,6 +53,10 @@ MainFrameBase::MainFrameBase( wxWindow* parent, wxWindowID id, const wxString& t
 	m_menubar->Append( m_menu_edit, _("Edit") );
 
 	m_menu_setting = new wxMenu();
+	wxMenuItem* m_menuItemAdjust;
+	m_menuItemAdjust = new wxMenuItem( m_menu_setting, wxID_ANY, wxString( _("Adjust") ) , wxEmptyString, wxITEM_NORMAL );
+	m_menu_setting->Append( m_menuItemAdjust );
+
 	m_menubar->Append( m_menu_setting, _("Setting") );
 
 	m_menu_help = new wxMenu();
@@ -60,9 +64,9 @@ MainFrameBase::MainFrameBase( wxWindow* parent, wxWindowID id, const wxString& t
 	m_menuItemManual = new wxMenuItem( m_menu_help, wxID_ANY, wxString( _("Manual") ) , wxEmptyString, wxITEM_NORMAL );
 	m_menu_help->Append( m_menuItemManual );
 
-	wxMenuItem* m_menuItemQuestion;
-	m_menuItemQuestion = new wxMenuItem( m_menu_help, wxID_ANY, wxString( _("Q&A") ) , wxEmptyString, wxITEM_NORMAL );
-	m_menu_help->Append( m_menuItemQuestion );
+	wxMenuItem* m_menuItemHelp;
+	m_menuItemHelp = new wxMenuItem( m_menu_help, wxID_ANY, wxString( _("Help") ) , wxEmptyString, wxITEM_NORMAL );
+	m_menu_help->Append( m_menuItemHelp );
 
 	wxMenuItem* m_menuItemAbout;
 	m_menuItemAbout = new wxMenuItem( m_menu_help, wxID_ANY, wxString( _("About") ) , wxEmptyString, wxITEM_NORMAL );
@@ -72,6 +76,7 @@ MainFrameBase::MainFrameBase( wxWindow* parent, wxWindowID id, const wxString& t
 
 	this->SetMenuBar( m_menubar );
 
+	m_statusBar = this->CreateStatusBar( 1, wxSTB_SIZEGRIP, wxID_ANY );
 
 	this->Centre( wxBOTH );
 
@@ -84,8 +89,9 @@ MainFrameBase::MainFrameBase( wxWindow* parent, wxWindowID id, const wxString& t
 	m_menu_edit->Bind(wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( MainFrameBase::m_menuItemCutOnMenuSelection ), this, m_menuItemCut->GetId());
 	m_menu_edit->Bind(wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( MainFrameBase::m_menuItemCopyOnMenuSelection ), this, m_menuItemCopy->GetId());
 	m_menu_edit->Bind(wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( MainFrameBase::m_menuItemPasteOnMenuSelection ), this, m_menuItemPaste->GetId());
+	m_menu_setting->Bind(wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( MainFrameBase::m_menuItemAdjustOnMenuSelection ), this, m_menuItemAdjust->GetId());
 	m_menu_help->Bind(wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( MainFrameBase::m_menuItemManualOnMenuSelection ), this, m_menuItemManual->GetId());
-	m_menu_help->Bind(wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( MainFrameBase::m_menuItemQuestionOnMenuSelection ), this, m_menuItemQuestion->GetId());
+	m_menu_help->Bind(wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( MainFrameBase::m_menuItemHelpOnMenuSelection ), this, m_menuItemHelp->GetId());
 	m_menu_help->Bind(wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( MainFrameBase::m_menuItemAboutOnMenuSelection ), this, m_menuItemAbout->GetId());
 }
 
@@ -129,6 +135,24 @@ QueueFrameBase::~QueueFrameBase()
 {
 }
 
+SampleFrameBase::SampleFrameBase( wxWindow* parent, wxWindowID id, const wxString& title, const wxPoint& pos, const wxSize& size, long style ) : wxFrame( parent, id, title, pos, size, style )
+{
+	this->SetSizeHints( wxDefaultSize, wxDefaultSize );
+
+	wxGridSizer* gSizer7;
+	gSizer7 = new wxGridSizer( 0, 2, 0, 0 );
+
+
+	this->SetSizer( gSizer7 );
+	this->Layout();
+
+	this->Centre( wxBOTH );
+}
+
+SampleFrameBase::~SampleFrameBase()
+{
+}
+
 RecordFrameBase::RecordFrameBase( wxWindow* parent, wxWindowID id, const wxString& title, const wxPoint& pos, const wxSize& size, long style ) : wxFrame( parent, id, title, pos, size, style )
 {
 	this->SetSizeHints( wxDefaultSize, wxDefaultSize );
@@ -165,6 +189,24 @@ AdjustFrameBase::~AdjustFrameBase()
 {
 }
 
+ManualFrameBase::ManualFrameBase( wxWindow* parent, wxWindowID id, const wxString& title, const wxPoint& pos, const wxSize& size, long style ) : wxFrame( parent, id, title, pos, size, style )
+{
+	this->SetSizeHints( wxDefaultSize, wxDefaultSize );
+
+	wxGridSizer* gSizer8;
+	gSizer8 = new wxGridSizer( 0, 2, 0, 0 );
+
+
+	this->SetSizer( gSizer8 );
+	this->Layout();
+
+	this->Centre( wxBOTH );
+}
+
+ManualFrameBase::~ManualFrameBase()
+{
+}
+
 HelpFrameBase::HelpFrameBase( wxWindow* parent, wxWindowID id, const wxString& title, const wxPoint& pos, const wxSize& size, long style ) : wxFrame( parent, id, title, pos, size, style )
 {
 	this->SetSizeHints( wxDefaultSize, wxDefaultSize );
@@ -187,11 +229,11 @@ AboutFrameBase::AboutFrameBase( wxWindow* parent, wxWindowID id, const wxString&
 {
 	this->SetSizeHints( wxDefaultSize, wxDefaultSize );
 
-	wxGridSizer* gSizer7;
-	gSizer7 = new wxGridSizer( 0, 2, 0, 0 );
+	wxGridSizer* gSizer9;
+	gSizer9 = new wxGridSizer( 0, 2, 0, 0 );
 
 
-	this->SetSizer( gSizer7 );
+	this->SetSizer( gSizer9 );
 	this->Layout();
 
 	this->Centre( wxBOTH );

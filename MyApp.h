@@ -43,6 +43,8 @@
 #include "sample.xpm"
 #endif
 
+#include "MyProject.h"
+
 // ----------------------------------------------------------------------------
 // MyApp
 // ----------------------------------------------------------------------------
@@ -51,8 +53,8 @@ class MyApp : public wxApp {
 public:
     virtual bool OnInit() wxOVERRIDE;
 
-public:
-    wxWindow *parent = NULL;
+private:
+    wxWindow *m_wxWindow = NULL;
 };
 
 #endif //APP_MYAPP_H

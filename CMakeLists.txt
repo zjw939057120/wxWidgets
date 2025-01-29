@@ -3,10 +3,10 @@ project(app)
 
 set(CMAKE_CXX_STANDARD 11)
 
-include_directories(../../lib/vc_x64_lib/mswu)
-include_directories(../../include)
+include_directories(../lib/vc_x64_lib/mswu)
+include_directories(../include)
 include_directories(.)
-link_directories(../../lib/vc_x64_lib)
+link_directories(../lib/vc_x64_lib)
 
 
 add_definitions(
