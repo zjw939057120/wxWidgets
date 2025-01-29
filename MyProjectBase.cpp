@@ -81,6 +81,7 @@ MainFrameBase::MainFrameBase( wxWindow* parent, wxWindowID id, const wxString& t
 	this->Centre( wxBOTH );
 
 	// Connect Events
+	this->Connect( wxEVT_CLOSE_WINDOW, wxCloseEventHandler( MainFrameBase::MainFrameBaseOnClose ) );
 	m_menu_file->Bind(wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( MainFrameBase::m_menuItemFunctionOnMenuSelection ), this, m_menuItemFunction->GetId());
 	m_menu_file->Bind(wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( MainFrameBase::m_menuItemQueueOnMenuSelection ), this, m_menuItemQueue->GetId());
 	m_menu_file->Bind(wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( MainFrameBase::m_menuItemSampleOnMenuSelection ), this, m_menuItemSample->GetId());
@@ -111,6 +112,9 @@ FunctionFrameBase::FunctionFrameBase( wxWindow* parent, wxWindowID id, const wxS
 	this->Layout();
 
 	this->Centre( wxBOTH );
+
+	// Connect Events
+	this->Connect( wxEVT_CLOSE_WINDOW, wxCloseEventHandler( FunctionFrameBase::FunctionFrameBaseOnClose ) );
 }
 
 FunctionFrameBase::~FunctionFrameBase()
@@ -129,6 +133,9 @@ QueueFrameBase::QueueFrameBase( wxWindow* parent, wxWindowID id, const wxString&
 	this->Layout();
 
 	this->Centre( wxBOTH );
+
+	// Connect Events
+	this->Connect( wxEVT_CLOSE_WINDOW, wxCloseEventHandler( QueueFrameBase::QueueFrameBaseOnClose ) );
 }
 
 QueueFrameBase::~QueueFrameBase()
@@ -147,6 +154,9 @@ SampleFrameBase::SampleFrameBase( wxWindow* parent, wxWindowID id, const wxStrin
 	this->Layout();
 
 	this->Centre( wxBOTH );
+
+	// Connect Events
+	this->Connect( wxEVT_CLOSE_WINDOW, wxCloseEventHandler( SampleFrameBase::SampleFrameBaseOnClose ) );
 }
 
 SampleFrameBase::~SampleFrameBase()
@@ -165,6 +175,9 @@ RecordFrameBase::RecordFrameBase( wxWindow* parent, wxWindowID id, const wxStrin
 	this->Layout();
 
 	this->Centre( wxBOTH );
+
+	// Connect Events
+	this->Connect( wxEVT_CLOSE_WINDOW, wxCloseEventHandler( RecordFrameBase::RecordFrameBaseOnClose ) );
 }
 
 RecordFrameBase::~RecordFrameBase()
@@ -183,6 +196,9 @@ AdjustFrameBase::AdjustFrameBase( wxWindow* parent, wxWindowID id, const wxStrin
 	this->Layout();
 
 	this->Centre( wxBOTH );
+
+	// Connect Events
+	this->Connect( wxEVT_CLOSE_WINDOW, wxCloseEventHandler( AdjustFrameBase::AdjustFrameBaseOnClose ) );
 }
 
 AdjustFrameBase::~AdjustFrameBase()
@@ -201,6 +217,9 @@ ManualFrameBase::ManualFrameBase( wxWindow* parent, wxWindowID id, const wxStrin
 	this->Layout();
 
 	this->Centre( wxBOTH );
+
+	// Connect Events
+	this->Connect( wxEVT_CLOSE_WINDOW, wxCloseEventHandler( ManualFrameBase::ManualFrameBaseOnClose ) );
 }
 
 ManualFrameBase::~ManualFrameBase()
@@ -219,6 +238,9 @@ HelpFrameBase::HelpFrameBase( wxWindow* parent, wxWindowID id, const wxString& t
 	this->Layout();
 
 	this->Centre( wxBOTH );
+
+	// Connect Events
+	this->Connect( wxEVT_CLOSE_WINDOW, wxCloseEventHandler( HelpFrameBase::HelpFrameBaseOnClose ) );
 }
 
 HelpFrameBase::~HelpFrameBase()
@@ -237,6 +259,9 @@ AboutFrameBase::AboutFrameBase( wxWindow* parent, wxWindowID id, const wxString&
 	this->Layout();
 
 	this->Centre( wxBOTH );
+
+	// Connect Events
+	this->Connect( wxEVT_CLOSE_WINDOW, wxCloseEventHandler( AboutFrameBase::AboutFrameBaseOnClose ) );
 }
 
 AboutFrameBase::~AboutFrameBase()

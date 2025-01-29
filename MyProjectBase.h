@@ -41,6 +41,7 @@ class MainFrameBase : public wxFrame
 		wxStatusBar* m_statusBar;
 
 		// Virtual event handlers, override them in your derived class
+		virtual void MainFrameBaseOnClose( wxCloseEvent& event ) { event.Skip(); }
 		virtual void m_menuItemFunctionOnMenuSelection( wxCommandEvent& event ) { event.Skip(); }
 		virtual void m_menuItemQueueOnMenuSelection( wxCommandEvent& event ) { event.Skip(); }
 		virtual void m_menuItemSampleOnMenuSelection( wxCommandEvent& event ) { event.Skip(); }
@@ -72,6 +73,10 @@ class FunctionFrameBase : public wxFrame
 
 	protected:
 
+		// Virtual event handlers, override them in your derived class
+		virtual void FunctionFrameBaseOnClose( wxCloseEvent& event ) { event.Skip(); }
+
+
 	public:
 
 		FunctionFrameBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Function"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 800,600 ), long style = wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL );
@@ -88,6 +93,10 @@ class QueueFrameBase : public wxFrame
 	private:
 
 	protected:
+
+		// Virtual event handlers, override them in your derived class
+		virtual void QueueFrameBaseOnClose( wxCloseEvent& event ) { event.Skip(); }
+
 
 	public:
 
@@ -106,6 +115,10 @@ class SampleFrameBase : public wxFrame
 
 	protected:
 
+		// Virtual event handlers, override them in your derived class
+		virtual void SampleFrameBaseOnClose( wxCloseEvent& event ) { event.Skip(); }
+
+
 	public:
 
 		SampleFrameBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Sample"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 800,600 ), long style = wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL );
@@ -122,6 +135,10 @@ class RecordFrameBase : public wxFrame
 	private:
 
 	protected:
+
+		// Virtual event handlers, override them in your derived class
+		virtual void RecordFrameBaseOnClose( wxCloseEvent& event ) { event.Skip(); }
+
 
 	public:
 
@@ -140,6 +157,10 @@ class AdjustFrameBase : public wxFrame
 
 	protected:
 
+		// Virtual event handlers, override them in your derived class
+		virtual void AdjustFrameBaseOnClose( wxCloseEvent& event ) { event.Skip(); }
+
+
 	public:
 
 		AdjustFrameBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Adjust"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 800,600 ), long style = wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL );
@@ -156,6 +177,10 @@ class ManualFrameBase : public wxFrame
 	private:
 
 	protected:
+
+		// Virtual event handlers, override them in your derived class
+		virtual void ManualFrameBaseOnClose( wxCloseEvent& event ) { event.Skip(); }
+
 
 	public:
 
@@ -174,6 +199,10 @@ class HelpFrameBase : public wxFrame
 
 	protected:
 
+		// Virtual event handlers, override them in your derived class
+		virtual void HelpFrameBaseOnClose( wxCloseEvent& event ) { event.Skip(); }
+
+
 	public:
 
 		HelpFrameBase( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = _("Help"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 800,600 ), long style = wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL );
@@ -190,6 +219,10 @@ class AboutFrameBase : public wxFrame
 	private:
 
 	protected:
+
+		// Virtual event handlers, override them in your derived class
+		virtual void AboutFrameBaseOnClose( wxCloseEvent& event ) { event.Skip(); }
+
 
 	public:
 

@@ -60,6 +60,7 @@
       <property name="window_name"></property>
       <property name="window_style">wxTAB_TRAVERSAL</property>
       <property name="xrc_skip_sizer">1</property>
+      <event name="OnClose">MainFrameBaseOnClose</event>
       <object class="wxMenuBar" expanded="true">
         <property name="bg"></property>
         <property name="context_help"></property>
@@ -325,6 +326,7 @@
       <property name="window_name"></property>
       <property name="window_style">wxTAB_TRAVERSAL</property>
       <property name="xrc_skip_sizer">1</property>
+      <event name="OnClose">FunctionFrameBaseOnClose</event>
       <object class="wxGridSizer" expanded="false">
         <property name="cols">2</property>
         <property name="hgap">0</property>
@@ -364,6 +366,7 @@
       <property name="window_name"></property>
       <property name="window_style">wxTAB_TRAVERSAL</property>
       <property name="xrc_skip_sizer">1</property>
+      <event name="OnClose">QueueFrameBaseOnClose</event>
       <object class="wxGridSizer" expanded="false">
         <property name="cols">2</property>
         <property name="hgap">0</property>
@@ -374,7 +377,7 @@
         <property name="vgap">0</property>
       </object>
     </object>
-    <object class="Frame" expanded="false">
+    <object class="Frame" expanded="true">
       <property name="aui_managed">0</property>
       <property name="aui_manager_style">wxAUI_MGR_DEFAULT</property>
       <property name="bg"></property>
@@ -403,6 +406,7 @@
       <property name="window_name"></property>
       <property name="window_style">wxTAB_TRAVERSAL</property>
       <property name="xrc_skip_sizer">1</property>
+      <event name="OnClose">SampleFrameBaseOnClose</event>
       <object class="wxGridSizer" expanded="false">
         <property name="cols">2</property>
         <property name="hgap">0</property>
@@ -413,7 +417,7 @@
         <property name="vgap">0</property>
       </object>
     </object>
-    <object class="Frame" expanded="false">
+    <object class="Frame" expanded="true">
       <property name="aui_managed">0</property>
       <property name="aui_manager_style">wxAUI_MGR_DEFAULT</property>
       <property name="bg"></property>
@@ -442,6 +446,7 @@
       <property name="window_name"></property>
       <property name="window_style">wxTAB_TRAVERSAL</property>
       <property name="xrc_skip_sizer">1</property>
+      <event name="OnClose">RecordFrameBaseOnClose</event>
       <object class="wxGridSizer" expanded="false">
         <property name="cols">2</property>
         <property name="hgap">0</property>
@@ -481,6 +486,7 @@
       <property name="window_name"></property>
       <property name="window_style">wxTAB_TRAVERSAL</property>
       <property name="xrc_skip_sizer">1</property>
+      <event name="OnClose">AdjustFrameBaseOnClose</event>
       <object class="wxGridSizer" expanded="false">
         <property name="cols">2</property>
         <property name="hgap">0</property>
@@ -520,6 +526,7 @@
       <property name="window_name"></property>
       <property name="window_style">wxTAB_TRAVERSAL</property>
       <property name="xrc_skip_sizer">1</property>
+      <event name="OnClose">ManualFrameBaseOnClose</event>
       <object class="wxGridSizer" expanded="false">
         <property name="cols">2</property>
         <property name="hgap">0</property>
@@ -559,6 +566,7 @@
       <property name="window_name"></property>
       <property name="window_style">wxTAB_TRAVERSAL</property>
       <property name="xrc_skip_sizer">1</property>
+      <event name="OnClose">HelpFrameBaseOnClose</event>
       <object class="wxGridSizer" expanded="false">
         <property name="cols">2</property>
         <property name="hgap">0</property>
@@ -569,7 +577,7 @@
         <property name="vgap">0</property>
       </object>
     </object>
-    <object class="Frame" expanded="true">
+    <object class="Frame" expanded="false">
       <property name="aui_managed">0</property>
       <property name="aui_manager_style">wxAUI_MGR_DEFAULT</property>
       <property name="bg"></property>
@@ -598,7 +606,8 @@
       <property name="window_name"></property>
       <property name="window_style">wxTAB_TRAVERSAL</property>
       <property name="xrc_skip_sizer">1</property>
-      <object class="wxGridSizer" expanded="true">
+      <event name="OnClose">AboutFrameBaseOnClose</event>
+      <object class="wxGridSizer" expanded="false">
         <property name="cols">2</property>
         <property name="hgap">0</property>
         <property name="minimum_size"></property>
