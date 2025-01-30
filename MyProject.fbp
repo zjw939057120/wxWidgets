@@ -61,7 +61,7 @@
       <property name="window_style">wxTAB_TRAVERSAL</property>
       <property name="xrc_skip_sizer">1</property>
       <event name="OnClose">MainFrameBaseOnClose</event>
-      <object class="wxMenuBar" expanded="true">
+      <object class="wxMenuBar" expanded="false">
         <property name="bg"></property>
         <property name="context_help"></property>
         <property name="context_menu">1</property>
@@ -272,7 +272,7 @@
           </object>
         </object>
       </object>
-      <object class="wxStatusBar" expanded="true">
+      <object class="wxStatusBar" expanded="false">
         <property name="bg"></property>
         <property name="context_help"></property>
         <property name="context_menu">1</property>
@@ -297,7 +297,7 @@
         <property name="window_style"></property>
       </object>
     </object>
-    <object class="Frame" expanded="false">
+    <object class="Frame" expanded="true">
       <property name="aui_managed">0</property>
       <property name="aui_manager_style">wxAUI_MGR_DEFAULT</property>
       <property name="bg"></property>
@@ -327,17 +327,21 @@
       <property name="window_style">wxTAB_TRAVERSAL</property>
       <property name="xrc_skip_sizer">1</property>
       <event name="OnClose">FunctionFrameBaseOnClose</event>
-      <object class="wxGridSizer" expanded="false">
+      <object class="wxFlexGridSizer" expanded="true">
         <property name="cols">2</property>
+        <property name="flexible_direction">wxBOTH</property>
+        <property name="growablecols"></property>
+        <property name="growablerows"></property>
         <property name="hgap">0</property>
         <property name="minimum_size"></property>
-        <property name="name">gSizer2</property>
+        <property name="name">fgSizer1</property>
+        <property name="non_flexible_grow_mode">wxFLEX_GROWMODE_SPECIFIED</property>
         <property name="permission">none</property>
         <property name="rows">0</property>
         <property name="vgap">0</property>
       </object>
     </object>
-    <object class="Frame" expanded="false">
+    <object class="Frame" expanded="true">
       <property name="aui_managed">0</property>
       <property name="aui_manager_style">wxAUI_MGR_DEFAULT</property>
       <property name="bg"></property>
@@ -367,11 +371,15 @@
       <property name="window_style">wxTAB_TRAVERSAL</property>
       <property name="xrc_skip_sizer">1</property>
       <event name="OnClose">QueueFrameBaseOnClose</event>
-      <object class="wxGridSizer" expanded="false">
+      <object class="wxFlexGridSizer" expanded="true">
         <property name="cols">2</property>
+        <property name="flexible_direction">wxBOTH</property>
+        <property name="growablecols"></property>
+        <property name="growablerows"></property>
         <property name="hgap">0</property>
         <property name="minimum_size"></property>
-        <property name="name">gSizer3</property>
+        <property name="name">fgSizer2</property>
+        <property name="non_flexible_grow_mode">wxFLEX_GROWMODE_SPECIFIED</property>
         <property name="permission">none</property>
         <property name="rows">0</property>
         <property name="vgap">0</property>
@@ -407,11 +415,15 @@
       <property name="window_style">wxTAB_TRAVERSAL</property>
       <property name="xrc_skip_sizer">1</property>
       <event name="OnClose">SampleFrameBaseOnClose</event>
-      <object class="wxGridSizer" expanded="false">
+      <object class="wxFlexGridSizer" expanded="true">
         <property name="cols">2</property>
+        <property name="flexible_direction">wxBOTH</property>
+        <property name="growablecols"></property>
+        <property name="growablerows"></property>
         <property name="hgap">0</property>
         <property name="minimum_size"></property>
-        <property name="name">gSizer7</property>
+        <property name="name">fgSizer3</property>
+        <property name="non_flexible_grow_mode">wxFLEX_GROWMODE_SPECIFIED</property>
         <property name="permission">none</property>
         <property name="rows">0</property>
         <property name="vgap">0</property>
@@ -447,17 +459,21 @@
       <property name="window_style">wxTAB_TRAVERSAL</property>
       <property name="xrc_skip_sizer">1</property>
       <event name="OnClose">RecordFrameBaseOnClose</event>
-      <object class="wxGridSizer" expanded="false">
+      <object class="wxFlexGridSizer" expanded="true">
         <property name="cols">2</property>
+        <property name="flexible_direction">wxBOTH</property>
+        <property name="growablecols"></property>
+        <property name="growablerows"></property>
         <property name="hgap">0</property>
         <property name="minimum_size"></property>
-        <property name="name">gSizer4</property>
+        <property name="name">fgSizer4</property>
+        <property name="non_flexible_grow_mode">wxFLEX_GROWMODE_SPECIFIED</property>
         <property name="permission">none</property>
         <property name="rows">0</property>
         <property name="vgap">0</property>
       </object>
     </object>
-    <object class="Frame" expanded="false">
+    <object class="Frame" expanded="true">
       <property name="aui_managed">0</property>
       <property name="aui_manager_style">wxAUI_MGR_DEFAULT</property>
       <property name="bg"></property>
@@ -487,17 +503,21 @@
       <property name="window_style">wxTAB_TRAVERSAL</property>
       <property name="xrc_skip_sizer">1</property>
       <event name="OnClose">AdjustFrameBaseOnClose</event>
-      <object class="wxGridSizer" expanded="false">
+      <object class="wxFlexGridSizer" expanded="true">
         <property name="cols">2</property>
+        <property name="flexible_direction">wxBOTH</property>
+        <property name="growablecols"></property>
+        <property name="growablerows"></property>
         <property name="hgap">0</property>
         <property name="minimum_size"></property>
-        <property name="name">gSizer5</property>
+        <property name="name">fgSizer5</property>
+        <property name="non_flexible_grow_mode">wxFLEX_GROWMODE_SPECIFIED</property>
         <property name="permission">none</property>
         <property name="rows">0</property>
         <property name="vgap">0</property>
       </object>
     </object>
-    <object class="Frame" expanded="false">
+    <object class="Frame" expanded="true">
       <property name="aui_managed">0</property>
       <property name="aui_manager_style">wxAUI_MGR_DEFAULT</property>
       <property name="bg"></property>
@@ -527,11 +547,15 @@
       <property name="window_style">wxTAB_TRAVERSAL</property>
       <property name="xrc_skip_sizer">1</property>
       <event name="OnClose">ManualFrameBaseOnClose</event>
-      <object class="wxGridSizer" expanded="false">
+      <object class="wxFlexGridSizer" expanded="true">
         <property name="cols">2</property>
+        <property name="flexible_direction">wxBOTH</property>
+        <property name="growablecols"></property>
+        <property name="growablerows"></property>
         <property name="hgap">0</property>
         <property name="minimum_size"></property>
-        <property name="name">gSizer8</property>
+        <property name="name">fgSizer6</property>
+        <property name="non_flexible_grow_mode">wxFLEX_GROWMODE_SPECIFIED</property>
         <property name="permission">none</property>
         <property name="rows">0</property>
         <property name="vgap">0</property>
@@ -567,17 +591,21 @@
       <property name="window_style">wxTAB_TRAVERSAL</property>
       <property name="xrc_skip_sizer">1</property>
       <event name="OnClose">HelpFrameBaseOnClose</event>
-      <object class="wxGridSizer" expanded="false">
+      <object class="wxFlexGridSizer" expanded="true">
         <property name="cols">2</property>
+        <property name="flexible_direction">wxBOTH</property>
+        <property name="growablecols"></property>
+        <property name="growablerows"></property>
         <property name="hgap">0</property>
         <property name="minimum_size"></property>
-        <property name="name">gSizer6</property>
+        <property name="name">fgSizer7</property>
+        <property name="non_flexible_grow_mode">wxFLEX_GROWMODE_SPECIFIED</property>
         <property name="permission">none</property>
         <property name="rows">0</property>
         <property name="vgap">0</property>
       </object>
     </object>
-    <object class="Frame" expanded="false">
+    <object class="Frame" expanded="true">
       <property name="aui_managed">0</property>
       <property name="aui_manager_style">wxAUI_MGR_DEFAULT</property>
       <property name="bg"></property>
@@ -607,11 +635,15 @@
       <property name="window_style">wxTAB_TRAVERSAL</property>
       <property name="xrc_skip_sizer">1</property>
       <event name="OnClose">AboutFrameBaseOnClose</event>
-      <object class="wxGridSizer" expanded="false">
+      <object class="wxFlexGridSizer" expanded="true">
         <property name="cols">2</property>
+        <property name="flexible_direction">wxBOTH</property>
+        <property name="growablecols"></property>
+        <property name="growablerows"></property>
         <property name="hgap">0</property>
         <property name="minimum_size"></property>
-        <property name="name">gSizer9</property>
+        <property name="name">fgSizer8</property>
+        <property name="non_flexible_grow_mode">wxFLEX_GROWMODE_SPECIFIED</property>
         <property name="permission">none</property>
         <property name="rows">0</property>
         <property name="vgap">0</property>

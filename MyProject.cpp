@@ -5,119 +5,6 @@
 #include "MyProject.h"
 #include "MyApp.h"
 
-FunctionFrame::FunctionFrame(wxWindow *parent) : FunctionFrameBase(parent) {
-    SetIcon(wxICON(sample));
-    this->SetBackgroundColour(*wxWHITE);
-    m_Parent = parent;
-}
-
-FunctionFrame::~FunctionFrame() {
-}
-
-void FunctionFrame::FunctionFrameBaseOnClose(wxCloseEvent &event) {
-    FunctionFrameBase::FunctionFrameBaseOnClose(event);
-    dynamic_cast <MainFrame *>(m_Parent)->m_FunctionFrame = NULL;
-}
-
-QueueFrame::QueueFrame(wxWindow *parent) : QueueFrameBase(parent) {
-    SetIcon(wxICON(sample));
-    this->SetBackgroundColour(*wxWHITE);
-    m_Parent = parent;
-}
-
-QueueFrame::~QueueFrame() {
-}
-
-void QueueFrame::QueueFrameBaseOnClose(wxCloseEvent &event) {
-    QueueFrameBase::QueueFrameBaseOnClose(event);
-    dynamic_cast <MainFrame *>(m_Parent)->m_QueueFrame = NULL;
-}
-
-SampleFrame::SampleFrame(wxWindow *parent) : SampleFrameBase(parent) {
-    SetIcon(wxICON(sample));
-    this->SetBackgroundColour(*wxWHITE);
-    m_Parent = parent;
-}
-
-SampleFrame::~SampleFrame() {
-}
-
-void SampleFrame::SampleFrameBaseOnClose(wxCloseEvent &event) {
-    SampleFrameBase::SampleFrameBaseOnClose(event);
-    dynamic_cast <MainFrame *>(m_Parent)->m_SampleFrame = NULL;
-}
-
-RecordFrame::RecordFrame(wxWindow *parent) : RecordFrameBase(parent) {
-    SetIcon(wxICON(sample));
-    this->SetBackgroundColour(*wxWHITE);
-    m_Parent = parent;
-}
-
-RecordFrame::~RecordFrame() {
-}
-
-void RecordFrame::RecordFrameBaseOnClose(wxCloseEvent &event) {
-    RecordFrameBase::RecordFrameBaseOnClose(event);
-    dynamic_cast <MainFrame *>(m_Parent)->m_RecordFrame = NULL;
-}
-
-AdjustFrame::AdjustFrame(wxWindow *parent) : AdjustFrameBase(parent) {
-    SetIcon(wxICON(sample));
-    this->SetBackgroundColour(*wxWHITE);
-    m_Parent = parent;
-}
-
-AdjustFrame::~AdjustFrame() {
-}
-
-void AdjustFrame::AdjustFrameBaseOnClose(wxCloseEvent &event) {
-    AdjustFrameBase::AdjustFrameBaseOnClose(event);
-    dynamic_cast <MainFrame *>(m_Parent)->m_AdjustFrame = NULL;
-}
-
-ManualFrame::ManualFrame(wxWindow *parent) : ManualFrameBase(parent) {
-    SetIcon(wxICON(sample));
-    this->SetBackgroundColour(*wxWHITE);
-    m_Parent = parent;
-}
-
-ManualFrame::~ManualFrame() {
-}
-
-void ManualFrame::ManualFrameBaseOnClose(wxCloseEvent &event) {
-    ManualFrameBase::ManualFrameBaseOnClose(event);
-    dynamic_cast <MainFrame *>(m_Parent)->m_ManualFrame = NULL;
-}
-
-HelpFrame::HelpFrame(wxWindow *parent) : HelpFrameBase(parent) {
-    SetIcon(wxICON(sample));
-    this->SetBackgroundColour(*wxWHITE);
-    m_Parent = parent;
-}
-
-HelpFrame::~HelpFrame() {
-}
-
-void HelpFrame::HelpFrameBaseOnClose(wxCloseEvent &event) {
-    HelpFrameBase::HelpFrameBaseOnClose(event);
-    dynamic_cast <MainFrame *>(m_Parent)->m_HelpFrame = NULL;
-}
-
-AboutFrame::AboutFrame(wxWindow *parent) : AboutFrameBase(parent) {
-    SetIcon(wxICON(sample));
-    this->SetBackgroundColour(*wxWHITE);
-    m_Parent = parent;
-}
-
-AboutFrame::~AboutFrame() {
-}
-
-void AboutFrame::AboutFrameBaseOnClose(wxCloseEvent &event) {
-    AboutFrameBase::AboutFrameBaseOnClose(event);
-    dynamic_cast <MainFrame *>(m_Parent)->m_AboutFrame = NULL;
-}
-
-
 MainFrame::MainFrame(wxWindow *parent) : MainFrameBase(parent) {
     SetIcon(wxICON(sample));
     this->SetBackgroundColour(*wxWHITE);
@@ -224,4 +111,116 @@ void MainFrame::m_menuItemAboutOnMenuSelection(wxCommandEvent &event) {
         m_AboutFrame = new AboutFrame(m_MainFrame);
         m_AboutFrame->Show(true);
     }
+}
+
+FunctionFrame::FunctionFrame(wxWindow *parent) : FunctionFrameBase(parent) {
+    SetIcon(wxICON(sample));
+    this->SetBackgroundColour(*wxWHITE);
+    m_MainFrame = dynamic_cast<MainFrame *>(parent);
+}
+
+FunctionFrame::~FunctionFrame() {
+}
+
+void FunctionFrame::FunctionFrameBaseOnClose(wxCloseEvent &event) {
+    FunctionFrameBase::FunctionFrameBaseOnClose(event);
+    m_MainFrame->m_FunctionFrame = NULL;
+}
+
+QueueFrame::QueueFrame(wxWindow *parent) : QueueFrameBase(parent) {
+    SetIcon(wxICON(sample));
+    this->SetBackgroundColour(*wxWHITE);
+    m_MainFrame = dynamic_cast<MainFrame *>(parent);
+}
+
+QueueFrame::~QueueFrame() {
+}
+
+void QueueFrame::QueueFrameBaseOnClose(wxCloseEvent &event) {
+    QueueFrameBase::QueueFrameBaseOnClose(event);
+    m_MainFrame->m_QueueFrame = NULL;
+}
+
+SampleFrame::SampleFrame(wxWindow *parent) : SampleFrameBase(parent) {
+    SetIcon(wxICON(sample));
+    this->SetBackgroundColour(*wxWHITE);
+    m_MainFrame = dynamic_cast<MainFrame *>(parent);
+}
+
+SampleFrame::~SampleFrame() {
+}
+
+void SampleFrame::SampleFrameBaseOnClose(wxCloseEvent &event) {
+    SampleFrameBase::SampleFrameBaseOnClose(event);
+    m_MainFrame->m_SampleFrame = NULL;
+}
+
+RecordFrame::RecordFrame(wxWindow *parent) : RecordFrameBase(parent) {
+    SetIcon(wxICON(sample));
+    this->SetBackgroundColour(*wxWHITE);
+    m_MainFrame = dynamic_cast<MainFrame *>(parent);
+}
+
+RecordFrame::~RecordFrame() {
+}
+
+void RecordFrame::RecordFrameBaseOnClose(wxCloseEvent &event) {
+    RecordFrameBase::RecordFrameBaseOnClose(event);
+    m_MainFrame->m_RecordFrame = NULL;
+}
+
+AdjustFrame::AdjustFrame(wxWindow *parent) : AdjustFrameBase(parent) {
+    SetIcon(wxICON(sample));
+    this->SetBackgroundColour(*wxWHITE);
+    m_MainFrame = dynamic_cast<MainFrame *>(parent);
+}
+
+AdjustFrame::~AdjustFrame() {
+}
+
+void AdjustFrame::AdjustFrameBaseOnClose(wxCloseEvent &event) {
+    AdjustFrameBase::AdjustFrameBaseOnClose(event);
+    m_MainFrame->m_AdjustFrame = NULL;
+}
+
+ManualFrame::ManualFrame(wxWindow *parent) : ManualFrameBase(parent) {
+    SetIcon(wxICON(sample));
+    this->SetBackgroundColour(*wxWHITE);
+    m_MainFrame = dynamic_cast<MainFrame *>(parent);
+}
+
+ManualFrame::~ManualFrame() {
+}
+
+void ManualFrame::ManualFrameBaseOnClose(wxCloseEvent &event) {
+    ManualFrameBase::ManualFrameBaseOnClose(event);
+    m_MainFrame->m_ManualFrame = NULL;
+}
+
+HelpFrame::HelpFrame(wxWindow *parent) : HelpFrameBase(parent) {
+    SetIcon(wxICON(sample));
+    this->SetBackgroundColour(*wxWHITE);
+    m_MainFrame = dynamic_cast<MainFrame *>(parent);
+}
+
+HelpFrame::~HelpFrame() {
+}
+
+void HelpFrame::HelpFrameBaseOnClose(wxCloseEvent &event) {
+    HelpFrameBase::HelpFrameBaseOnClose(event);
+    m_MainFrame->m_HelpFrame = NULL;
+}
+
+AboutFrame::AboutFrame(wxWindow *parent) : AboutFrameBase(parent) {
+    SetIcon(wxICON(sample));
+    this->SetBackgroundColour(*wxWHITE);
+    m_MainFrame = dynamic_cast<MainFrame *>(parent);
+}
+
+AboutFrame::~AboutFrame() {
+}
+
+void AboutFrame::AboutFrameBaseOnClose(wxCloseEvent &event) {
+    AboutFrameBase::AboutFrameBaseOnClose(event);
+    m_MainFrame->m_AboutFrame = NULL;
 }

@@ -104,11 +104,13 @@ FunctionFrameBase::FunctionFrameBase( wxWindow* parent, wxWindowID id, const wxS
 {
 	this->SetSizeHints( wxDefaultSize, wxDefaultSize );
 
-	wxGridSizer* gSizer2;
-	gSizer2 = new wxGridSizer( 0, 2, 0, 0 );
+	wxFlexGridSizer* fgSizer1;
+	fgSizer1 = new wxFlexGridSizer( 0, 2, 0, 0 );
+	fgSizer1->SetFlexibleDirection( wxBOTH );
+	fgSizer1->SetNonFlexibleGrowMode( wxFLEX_GROWMODE_SPECIFIED );
 
 
-	this->SetSizer( gSizer2 );
+	this->SetSizer( fgSizer1 );
 	this->Layout();
 
 	this->Centre( wxBOTH );
@@ -125,11 +127,13 @@ QueueFrameBase::QueueFrameBase( wxWindow* parent, wxWindowID id, const wxString&
 {
 	this->SetSizeHints( wxDefaultSize, wxDefaultSize );
 
-	wxGridSizer* gSizer3;
-	gSizer3 = new wxGridSizer( 0, 2, 0, 0 );
+	wxFlexGridSizer* fgSizer2;
+	fgSizer2 = new wxFlexGridSizer( 0, 2, 0, 0 );
+	fgSizer2->SetFlexibleDirection( wxBOTH );
+	fgSizer2->SetNonFlexibleGrowMode( wxFLEX_GROWMODE_SPECIFIED );
 
 
-	this->SetSizer( gSizer3 );
+	this->SetSizer( fgSizer2 );
 	this->Layout();
 
 	this->Centre( wxBOTH );
@@ -146,11 +150,13 @@ SampleFrameBase::SampleFrameBase( wxWindow* parent, wxWindowID id, const wxStrin
 {
 	this->SetSizeHints( wxDefaultSize, wxDefaultSize );
 
-	wxGridSizer* gSizer7;
-	gSizer7 = new wxGridSizer( 0, 2, 0, 0 );
+	wxFlexGridSizer* fgSizer3;
+	fgSizer3 = new wxFlexGridSizer( 0, 2, 0, 0 );
+	fgSizer3->SetFlexibleDirection( wxBOTH );
+	fgSizer3->SetNonFlexibleGrowMode( wxFLEX_GROWMODE_SPECIFIED );
 
 
-	this->SetSizer( gSizer7 );
+	this->SetSizer( fgSizer3 );
 	this->Layout();
 
 	this->Centre( wxBOTH );
@@ -167,11 +173,13 @@ RecordFrameBase::RecordFrameBase( wxWindow* parent, wxWindowID id, const wxStrin
 {
 	this->SetSizeHints( wxDefaultSize, wxDefaultSize );
 
-	wxGridSizer* gSizer4;
-	gSizer4 = new wxGridSizer( 0, 2, 0, 0 );
+	wxFlexGridSizer* fgSizer4;
+	fgSizer4 = new wxFlexGridSizer( 0, 2, 0, 0 );
+	fgSizer4->SetFlexibleDirection( wxBOTH );
+	fgSizer4->SetNonFlexibleGrowMode( wxFLEX_GROWMODE_SPECIFIED );
 
 
-	this->SetSizer( gSizer4 );
+	this->SetSizer( fgSizer4 );
 	this->Layout();
 
 	this->Centre( wxBOTH );
@@ -188,11 +196,13 @@ AdjustFrameBase::AdjustFrameBase( wxWindow* parent, wxWindowID id, const wxStrin
 {
 	this->SetSizeHints( wxDefaultSize, wxDefaultSize );
 
-	wxGridSizer* gSizer5;
-	gSizer5 = new wxGridSizer( 0, 2, 0, 0 );
+	wxFlexGridSizer* fgSizer5;
+	fgSizer5 = new wxFlexGridSizer( 0, 2, 0, 0 );
+	fgSizer5->SetFlexibleDirection( wxBOTH );
+	fgSizer5->SetNonFlexibleGrowMode( wxFLEX_GROWMODE_SPECIFIED );
 
 
-	this->SetSizer( gSizer5 );
+	this->SetSizer( fgSizer5 );
 	this->Layout();
 
 	this->Centre( wxBOTH );
@@ -209,11 +219,13 @@ ManualFrameBase::ManualFrameBase( wxWindow* parent, wxWindowID id, const wxStrin
 {
 	this->SetSizeHints( wxDefaultSize, wxDefaultSize );
 
-	wxGridSizer* gSizer8;
-	gSizer8 = new wxGridSizer( 0, 2, 0, 0 );
+	wxFlexGridSizer* fgSizer6;
+	fgSizer6 = new wxFlexGridSizer( 0, 2, 0, 0 );
+	fgSizer6->SetFlexibleDirection( wxBOTH );
+	fgSizer6->SetNonFlexibleGrowMode( wxFLEX_GROWMODE_SPECIFIED );
 
 
-	this->SetSizer( gSizer8 );
+	this->SetSizer( fgSizer6 );
 	this->Layout();
 
 	this->Centre( wxBOTH );
@@ -230,11 +242,13 @@ HelpFrameBase::HelpFrameBase( wxWindow* parent, wxWindowID id, const wxString& t
 {
 	this->SetSizeHints( wxDefaultSize, wxDefaultSize );
 
-	wxGridSizer* gSizer6;
-	gSizer6 = new wxGridSizer( 0, 2, 0, 0 );
+	wxFlexGridSizer* fgSizer7;
+	fgSizer7 = new wxFlexGridSizer( 0, 2, 0, 0 );
+	fgSizer7->SetFlexibleDirection( wxBOTH );
+	fgSizer7->SetNonFlexibleGrowMode( wxFLEX_GROWMODE_SPECIFIED );
 
 
-	this->SetSizer( gSizer6 );
+	this->SetSizer( fgSizer7 );
 	this->Layout();
 
 	this->Centre( wxBOTH );
@@ -251,11 +265,13 @@ AboutFrameBase::AboutFrameBase( wxWindow* parent, wxWindowID id, const wxString&
 {
 	this->SetSizeHints( wxDefaultSize, wxDefaultSize );
 
-	wxGridSizer* gSizer9;
-	gSizer9 = new wxGridSizer( 0, 2, 0, 0 );
+	wxFlexGridSizer* fgSizer8;
+	fgSizer8 = new wxFlexGridSizer( 0, 2, 0, 0 );
+	fgSizer8->SetFlexibleDirection( wxBOTH );
+	fgSizer8->SetNonFlexibleGrowMode( wxFLEX_GROWMODE_SPECIFIED );
 
 
-	this->SetSizer( gSizer9 );
+	this->SetSizer( fgSizer8 );
 	this->Layout();
 
 	this->Centre( wxBOTH );

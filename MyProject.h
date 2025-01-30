@@ -7,133 +7,6 @@
 
 #include "MyProjectBase.h"
 
-class FunctionFrame : public FunctionFrameBase {
-public:
-
-    FunctionFrame(wxWindow *parent);
-
-    ~FunctionFrame();
-
-protected:
-
-
-    virtual void FunctionFrameBaseOnClose(wxCloseEvent &event) wxOVERRIDE;
-
-public:
-    wxWindow *m_Parent = NULL;
-};
-
-class QueueFrame : public QueueFrameBase {
-public:
-
-    QueueFrame(wxWindow *parent);
-
-    ~QueueFrame();
-
-protected:
-
-
-    void QueueFrameBaseOnClose(wxCloseEvent &event) wxOVERRIDE;
-
-public:
-    wxWindow *m_Parent = NULL;
-};
-
-class SampleFrame : public SampleFrameBase {
-public:
-
-    SampleFrame(wxWindow *parent);
-
-    ~SampleFrame();
-
-protected:
-
-
-    void SampleFrameBaseOnClose(wxCloseEvent &event) wxOVERRIDE;
-
-public:
-    wxWindow *m_Parent = NULL;
-};
-
-class RecordFrame : public RecordFrameBase {
-public:
-
-    RecordFrame(wxWindow *parent);
-
-    ~RecordFrame();
-
-protected:
-
-
-    void RecordFrameBaseOnClose(wxCloseEvent &event) wxOVERRIDE;
-
-public:
-    wxWindow *m_Parent = NULL;
-};
-
-class AdjustFrame : public AdjustFrameBase {
-public:
-
-    AdjustFrame(wxWindow *parent);
-
-    ~AdjustFrame();
-
-protected:
-
-
-    void AdjustFrameBaseOnClose(wxCloseEvent &event) wxOVERRIDE;
-
-public:
-    wxWindow *m_Parent = NULL;
-};
-
-class ManualFrame : public ManualFrameBase {
-public:
-
-    ManualFrame(wxWindow *parent);
-
-    ~ManualFrame();
-
-protected:
-
-
-    void ManualFrameBaseOnClose(wxCloseEvent &event) wxOVERRIDE;
-
-public:
-    wxWindow *m_Parent = NULL;
-};
-
-class HelpFrame : public HelpFrameBase {
-public:
-
-    HelpFrame(wxWindow *parent);
-
-    ~HelpFrame();
-
-protected:
-
-
-    void HelpFrameBaseOnClose(wxCloseEvent &event) wxOVERRIDE;
-
-public:
-    wxWindow *m_Parent = NULL;
-};
-
-class AboutFrame : public AboutFrameBase {
-public:
-
-    AboutFrame(wxWindow *parent);
-
-    ~AboutFrame();
-
-protected:
-
-    void AboutFrameBaseOnClose(wxCloseEvent &event) wxOVERRIDE;
-
-public:
-    wxWindow *m_Parent = NULL;
-};
-
 
 class MainFrame : public MainFrameBase {
 public:
@@ -168,15 +41,143 @@ protected:
     void m_menuItemAboutOnMenuSelection(wxCommandEvent &event) wxOVERRIDE;
 
 public:
-    wxWindow *m_MainFrame = NULL;
-    wxWindow *m_FunctionFrame = NULL;
-    wxWindow *m_QueueFrame = NULL;
-    wxWindow *m_SampleFrame = NULL;
-    wxWindow *m_RecordFrame = NULL;
-    wxWindow *m_AdjustFrame = NULL;
-    wxWindow *m_ManualFrame = NULL;
-    wxWindow *m_HelpFrame = NULL;
-    wxWindow *m_AboutFrame = NULL;
+    wxFrame *m_MainFrame = NULL;
+    wxFrame *m_FunctionFrame = NULL;
+    wxFrame *m_QueueFrame = NULL;
+    wxFrame *m_SampleFrame = NULL;
+    wxFrame *m_RecordFrame = NULL;
+    wxFrame *m_AdjustFrame = NULL;
+    wxFrame *m_ManualFrame = NULL;
+    wxFrame *m_HelpFrame = NULL;
+    wxFrame *m_AboutFrame = NULL;
 };
+
+class FunctionFrame : public FunctionFrameBase {
+public:
+
+    FunctionFrame(wxWindow *parent);
+
+    ~FunctionFrame();
+
+protected:
+
+
+    virtual void FunctionFrameBaseOnClose(wxCloseEvent &event) wxOVERRIDE;
+
+public:
+    MainFrame *m_MainFrame = NULL;
+};
+
+class QueueFrame : public QueueFrameBase {
+public:
+
+    QueueFrame(wxWindow *parent);
+
+    ~QueueFrame();
+
+protected:
+
+
+    void QueueFrameBaseOnClose(wxCloseEvent &event) wxOVERRIDE;
+
+public:
+    MainFrame *m_MainFrame = NULL;
+};
+
+class SampleFrame : public SampleFrameBase {
+public:
+
+    SampleFrame(wxWindow *parent);
+
+    ~SampleFrame();
+
+protected:
+
+
+    void SampleFrameBaseOnClose(wxCloseEvent &event) wxOVERRIDE;
+
+public:
+    MainFrame *m_MainFrame = NULL;
+};
+
+class RecordFrame : public RecordFrameBase {
+public:
+
+    RecordFrame(wxWindow *parent);
+
+    ~RecordFrame();
+
+protected:
+
+
+    void RecordFrameBaseOnClose(wxCloseEvent &event) wxOVERRIDE;
+
+public:
+    MainFrame *m_MainFrame = NULL;
+};
+
+class AdjustFrame : public AdjustFrameBase {
+public:
+
+    AdjustFrame(wxWindow *parent);
+
+    ~AdjustFrame();
+
+protected:
+
+
+    void AdjustFrameBaseOnClose(wxCloseEvent &event) wxOVERRIDE;
+
+public:
+    MainFrame *m_MainFrame = NULL;
+};
+
+class ManualFrame : public ManualFrameBase {
+public:
+
+    ManualFrame(wxWindow *parent);
+
+    ~ManualFrame();
+
+protected:
+
+
+    void ManualFrameBaseOnClose(wxCloseEvent &event) wxOVERRIDE;
+
+public:
+    MainFrame *m_MainFrame = NULL;
+};
+
+class HelpFrame : public HelpFrameBase {
+public:
+
+    HelpFrame(wxWindow *parent);
+
+    ~HelpFrame();
+
+protected:
+
+
+    void HelpFrameBaseOnClose(wxCloseEvent &event) wxOVERRIDE;
+
+public:
+    MainFrame *m_MainFrame = NULL;
+};
+
+class AboutFrame : public AboutFrameBase {
+public:
+
+    AboutFrame(wxWindow *parent);
+
+    ~AboutFrame();
+
+protected:
+
+    void AboutFrameBaseOnClose(wxCloseEvent &event) wxOVERRIDE;
+
+public:
+    MainFrame *m_MainFrame = NULL;
+};
+
 
 #endif //APP_MYPROJECT_H
